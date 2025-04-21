@@ -1,0 +1,13 @@
+Can use callable statement for procedure
+can use Statement / Prepare statement
+
+if you want insert / update you can use execute update. which will make some changes in the database
+
+the execute query returns ResultSet. Just imagine the ResultSet as the table format
+
+========================================================================================================
+
+*) Issue with "Statement" - it is a string based sql query. means its a static and coder have to always pass the content.
+
+*) "PreparedStatement" - Used to execute parameterized SQL queries
+
