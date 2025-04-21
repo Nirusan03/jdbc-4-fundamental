@@ -7,7 +7,7 @@ public class Execution_Code1_Statement {
 
         String url = "jdbc:postgresql://localhost:5432/telusko";
         String username = "postgres";
-        String password = "root";
+        String password = "";
 
         Connection con = DriverManager.getConnection(url, username, password);
         Statement st = con.createStatement();
