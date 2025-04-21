@@ -1,6 +1,8 @@
+package Statement;
+
 import java.sql.*;
 
-public class Execution_Code1_Statement {
+public class Execution_Statement_Select {
     public static void main (String[] args) throws SQLException {
 
         String sql = "SELECT name FROM public.product WHERE name = 'Laptop'";

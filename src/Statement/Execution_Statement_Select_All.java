@@ -1,6 +1,8 @@
+package Statement;
+
 import java.sql.*;
 
-public class Execution_Code2_Statement {
+public class Execution_Statement_Select_All {
     public static void main (String[] args) throws SQLException {
 
         String productData = "";
