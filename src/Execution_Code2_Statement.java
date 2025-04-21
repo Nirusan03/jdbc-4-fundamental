@@ -1,23 +1,27 @@
 import java.sql.*;
 
-public class Demo {
+public class Execution_Code2_Statement {
     public static void main (String[] args) throws SQLException {
 
-        String sql = "SELECT name FROM public.product WHERE name = 'Laptop'";
+        String productData = "";
+        String sql = "SELECT * FROM public.product";
 
         String url = "jdbc:postgresql://localhost:5432/telusko";
         String username = "postgres";
-        String password = "root";
+        String password = "";
 
         Connection con = DriverManager.getConnection(url, username, password);
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(sql);
 
-        rs.next();
+        while (rs.next()){
+            for (int i = 1; i < 6; i++){
+                productData += rs.getString(i) + " | ";
+            }
+            productData += "\n";
+        }
 
-        String name = rs.getString(1);
-
-        System.out.println(name);
+        System.out.println(productData);
 
         con.close();
     }
